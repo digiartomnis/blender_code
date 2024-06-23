@@ -1,12 +1,16 @@
-
 import bpy
 import bmesh
+import os
 
+# 获取脚本所在目录
+script_dir = os.path.dirname(os.path.realpath(__file__))
+print(script_dir)
 # 清空默认场景
 bpy.ops.wm.read_factory_settings(use_empty=True)
 
 # 导入OBJ文件
-bpy.ops.wm.obj_import(filepath="./bunny.obj")
+obj_path = os.path.join(script_dir, "D:\\code\\blender_code\\bunny.obj")
+bpy.ops.wm.obj_import(filepath=obj_path)
 
 # 获取当前场景中的对象
 obj = bpy.context.selected_objects[0]
@@ -33,4 +37,5 @@ for area in bpy.context.screen.areas:
                 space.shading.type = 'MATERIAL'
 
 # 保存blender文件
-bpy.ops.wm.save_mainfile(filepath=".\smoothed_bunny.blend")
+blend_path = os.path.join(script_dir, "./smoothed_bunny.blend")
+bpy.ops.wm.save_mainfile(filepath=blend_path)

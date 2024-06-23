@@ -30,3 +30,5 @@ python --version
 
 :: 启动新的命令提示符，保持环境激活
 cmd /k
+
+:: Vscode重新加载窗口（Ctrl+Shift+P，然后输入 "Reload Window"）。可以让fake-bpy-module起作用
