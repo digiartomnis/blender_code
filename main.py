@@ -33,4 +33,4 @@ for area in bpy.context.screen.areas:
                 space.shading.type = 'MATERIAL'
 
 # 保存blender文件
-bpy.ops.wm.save_mainfile(filepath="D:\\code\\claude_test\\smoothed_bunny.blend")
+bpy.ops.wm.save_mainfile(filepath=".\smoothed_bunny.blend")
